@@ -9,6 +9,9 @@
     rgba(62, 143, 220, 1) 66%, 
     rgba(173, 38, 227, 1) 100%
   );
+
+  --accent-purple: #AD26E3;
+  --accent-gradient: linear-gradient(135deg, #AD26E3 0%, #7F00FF 100%);
   
   --primary: rgba(127, 0, 255, 1);
   --secondary: rgba(52, 152, 219, 1);
@@ -74,6 +77,15 @@ a {
   color: inherit;
   text-decoration: none;
   transition: var(--transition);
+}
+
+.gradientText {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-style: italic;
+  display: inline-block;
 }
 
 button {

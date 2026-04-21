@@ -2,10 +2,16 @@
   "topBadge": "EVA • THE FUTURE OF CREATIVITY",
   "titlePart1": "The future of imaging",
   "titlePart2": "is written with",
-  "titlePart3": "EVA's intelligence",
-  "description": "Discover a new era of visual production where AI power meets the finesse of human art. EVA transforms your concepts into unforgettable cinematic experiences.",
-  "clientText": "Customer feedback.",
-  "btnStart": "Start a Project",
+  "titlePart3": "the vision of EVA",
+  "description": "Discover a new era of visual production where the power of AI meets the finesse of human art. EVA transforms your concepts into unforgettable cinematic experiences.",
+  "clientText": "Clients trust us.",
+  "btnStart": "Start A Project",
   "btnDiscover": "Discover EVA",
-  "contactBtn": "Contact Us"
+  "contactBtn": "Contact Us",
+  "aboutTitlePart1": "Human emotion,",
+  "aboutTitlePart2": "transcended by AI.",
+  "aboutExpNumber": "5+",
+  "aboutExpText": "Years of experience",
+  "aboutDescription": "At EVA, we believe innovation is hollow without a soul. Our studio merges the boldness of generative AI with the finesse of artistic expertise to create visions that leave a lasting impact.",
+  "aboutBtn": "Explore the universe"
 }

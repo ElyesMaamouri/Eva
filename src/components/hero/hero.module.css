@@ -47,7 +47,7 @@
 
 .moon {
   position: absolute;
-  bottom: 28%;
+  /* bottom: 28%; */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -266,7 +266,7 @@
   padding: 0 32px;
   border-radius: var(--btn-radius);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
+  color: #fff;
   font-family: 'Epilogue', sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -339,7 +339,7 @@
   }
 
   .moon {
-    bottom: 80%;
+    bottom: 66%;
   }
 
   .floatingArrow {
@@ -357,4 +357,7 @@
     flex-direction: column;
   }
 
+  .moon {
+    bottom: 82%;
+  }
 }

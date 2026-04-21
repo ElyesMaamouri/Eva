@@ -52,7 +52,7 @@ const Navbar = () => {
 
         <div className={styles.actions}>
           <div className={`${styles.langContainer} ${langOpen ? styles.langOpen : ''}`}>
-            <button 
+            <button
               className={styles.langCurrent}
               onClick={() => setLangOpen(!langOpen)}
             >
@@ -62,20 +62,20 @@ const Navbar = () => {
               </svg>
             </button>
             <div className={styles.langDropdown}>
-              <button 
-                onClick={() => { setLanguage('fr'); setLangOpen(false); }} 
+              <button
+                onClick={() => { setLanguage('fr'); setLangOpen(false); }}
                 className={language === 'fr' ? styles.activeLang : ''}
               >
                 Français
               </button>
-              <button 
-                onClick={() => { setLanguage('en'); setLangOpen(false); }} 
+              <button
+                onClick={() => { setLanguage('en'); setLangOpen(false); }}
                 className={language === 'en' ? styles.activeLang : ''}
               >
                 English
               </button>
-              <button 
-                onClick={() => { setLanguage('ar'); setLangOpen(false); }} 
+              <button
+                onClick={() => { setLanguage('ar'); setLangOpen(false); }}
                 className={language === 'ar' ? styles.activeLang : ''}
               >
                 العربية
@@ -93,14 +93,14 @@ const Navbar = () => {
               className={styles.iconCircle}
               variants={{
                 hover: {
-                  rotate: isRTL ? -45 : 45, // Try to adjust based on visual feedback
+                  rotate: isRTL ? -45 : 45,
                   scale: 1.1,
                   transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
                 },
               }}
             >
               <svg 
-                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"
+                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"
                 style={{ transform: isRTL ? 'scaleX(-1)' : 'none' }}
               >
                 <line x1="7" y1="17" x2="17" y2="7"></line>
