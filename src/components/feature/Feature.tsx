@@ -88,10 +88,10 @@ const Feature = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         <div className={styles.header}>
-          <h2 className={styles.bgTitle}>{dict.featureSub}</h2>
-          <motion.h1 variants={itemVariants} className={styles.mainTitle}>
+          <span className={styles.bgTitle}>{dict.featureSub}</span>
+          <motion.h2 variants={itemVariants} className={styles.mainTitle}>
             {dict.featureTitle}
-          </motion.h1>
+          </motion.h2>
         </div>
 
         <div className={styles.grid}>

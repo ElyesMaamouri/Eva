@@ -1,0 +1,64 @@
+.partners {
+  padding: 10px 0;
+  background-color: var(--bg-dark-pure);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  /* Subtle separation */
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  /* Gradient masks for smooth fade in/out edges */
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  /* Large gap for a clean look */
+  padding: 0 60px;
+  will-change: transform;
+}
+
+.logoItem {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  object-fit: contain;
+  opacity: 0.4;
+  /* Subtle look like the reference site */
+  filter: grayscale(1) brightness(2);
+  /* Make them monochromatic white */
+  transition: opacity 0.4s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+  .track {
+    gap: 60px;
+  }
+
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+}
