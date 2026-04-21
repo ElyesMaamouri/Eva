@@ -13,5 +13,13 @@
   "aboutExpNumber": "5+",
   "aboutExpText": "Years of experience",
   "aboutDescription": "At EVA, we believe innovation is hollow without a soul. Our studio merges the boldness of generative AI with the finesse of artistic expertise to create visions that leave a lasting impact.",
-  "aboutBtn": "Explore the universe"
+  "aboutBtn": "Explore the universe",
+  "featureTitle": "Our Expertise",
+  "featureSub": "Radical visual solutions for brands in pursuit of singularity.",
+  "feat1Title": "AI Video Production",
+  "feat1Desc": "High-end cinematic sequences, social media campaigns, and brand films generated through proprietary AI pipelines.",
+  "feat2Title": "AI Product Visuals",
+  "feat2Desc": "Photorealistic product staging in any environment imaginable. Elevate your e-commerce with surreal art direction.",
+  "feat3Title": "Creative Concepting",
+  "feat3Desc": "Storyboarding and narrative development that leverages AI to visualize complex ideas instantly during pre-production."
 }

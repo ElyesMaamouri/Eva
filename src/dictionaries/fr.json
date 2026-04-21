@@ -13,5 +13,13 @@
   "aboutExpNumber": "5+",
   "aboutExpText": "Années d'expérience",
   "aboutDescription": "Chez EVA, nous croyons que l'innovation est vaine sans âme. Notre studio unit l'audace de l'IA générative à la finesse de l'expertise artistique pour créer des visions qui marquent durablement les esprits.",
-  "aboutBtn": "Explorer notre univers"
+  "aboutBtn": "Explorer notre univers",
+  "featureTitle": "Nos Expertises",
+  "featureSub": "Des solutions visuelles radicales pour marques en quête de singularité.",
+  "feat1Title": "Production Vidéo IA",
+  "feat1Desc": "Séquences cinématographiques haut de gamme, campagnes sociales et films de marque générés via nos pipelines IA propriétaires.",
+  "feat2Title": "Visuels Produits IA",
+  "feat2Desc": "Mise en scène photoréaliste de produits dans n'importe quel environnement. Élevez votre e-commerce avec une direction artistique surréaliste.",
+  "feat3Title": "Conception Créative",
+  "feat3Desc": "Storyboarding et développement narratif exploitant l'IA pour visualiser instantanément des idées complexes en pré-production."
 }

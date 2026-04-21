@@ -1,61 +1,210 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-}
-
-.card {
-  padding: 2.5rem;
-  border-radius: var(--radius-lg);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  transition: var(--transition);
+.feature {
+  padding: 140px 0;
+  background-color: var(--bg-dark-pure);
   position: relative;
   overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: hsla(230, 85%, 60%, 0.2);
+.ambientGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9;
+  opacity: 0.9;
 }
 
-.iconWrapper {
-  width: 3.5rem;
-  height: 3.5rem;
-  background: var(--primary);
-  border-radius: var(--radius-md);
+.glowHighlight {
+  position: absolute;
+  top: -55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: var(--max-width-container);
+  height: 800px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
+  filter: blur(60px);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 80px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.5rem;
+  flex-direction: column;
+}
+
+.bgTitle {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 72px;
+  letter-spacing: -3px;
+  color: rgba(226, 226, 226, 0.1);
+  margin-bottom: -40px;
+  max-width: 800px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.mainTitle {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  color: rgba(226, 226, 226, 1);
+  position: relative;
+  z-index: 2;
+  text-transform: capitalize;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+
+  overflow: hidden;
+}
+
+.card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  background: rgba(75, 67, 86, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.cardInnerGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.innerGlowImg {
+  filter: blur(20px);
+}
+
+.cardTop,
+.cardBottom {
+  position: relative;
+  z-index: 2;
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cardNumber {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--text-color);
+  opacity: 1;
+}
+
+.textPart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .cardTitle {
-  font-size: 1.25rem;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 30px;
   font-weight: 700;
+  line-height: 36px;
+  color: rgba(226, 226, 226, 1);
+  letter-spacing: 0;
+  max-width: 260px;
 }
 
 .cardDesc {
-  color: var(--muted-text);
-  line-height: 1.6;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgba(199, 198, 198, 1);
+  max-width: 280px;
 }
 
-.cardLink {
-  margin-top: auto;
-  font-weight: 600;
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.cardBottom {
+  margin-top: 60px;
 }
 
-.cardLink:hover {
-  gap: 0.75rem;
+.iconWrapper {
+  color: var(--accent-purple);
+  opacity: 0.9;
+}
+
+/* RTL Support */
+:global([dir="rtl"]) .bgTitle {
+  margin-right: 0;
+}
+
+:global([dir="rtl"]) .card {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+:global([dir="rtl"]) .card:last-child {
+  border-left: none;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .grid {
+
+    gap: 20px;
+  }
+
+  /* .card {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    min-height: auto;
+  } */
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardTop {
+    margin-bottom: 40px;
+  }
+
+  .cardTitle {
+    font-size: 25px;
+  }
+
+  .mainTitle {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .bgTitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
