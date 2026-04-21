@@ -1,5 +1,5 @@
 .feature {
-  padding: 140px 0;
+
   background-color: var(--bg-dark-pure);
   position: relative;
   overflow: hidden;
@@ -160,6 +160,15 @@
 /* RTL Support */
 :global([dir="rtl"]) .bgTitle {
   margin-right: 0;
+  font-family: 'Tajawal', sans-serif;
+}
+
+:global([dir="rtl"]) .mainTitle,
+:global([dir="rtl"]) .featureSub,
+:global([dir="rtl"]) .cardTitle,
+:global([dir="rtl"]) .cardDesc,
+:global([dir="rtl"]) .cardNumber {
+  font-family: 'Tajawal', sans-serif;
 }
 
 :global([dir="rtl"]) .card {
