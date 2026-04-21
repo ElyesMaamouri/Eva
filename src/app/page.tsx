@@ -5,6 +5,7 @@ import Vision from "@/components/vision/Vision";
 import Showcase from "@/components/showcase/Showcase";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Partners from "@/components/partners/Partners";
+import Blog from "@/components/blog/Blog";
 
 export default function Home() {
   return (
@@ -13,10 +14,10 @@ export default function Home() {
       <About />
       <Feature />
       <Vision />
-
       <Portfolio />
       <Partners />
       <Showcase />
+      <Blog />
     </main>
   );
 }

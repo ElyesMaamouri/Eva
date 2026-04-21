@@ -1,0 +1,231 @@
+.blog {
+  padding: 100px 0;
+  background-color: var(--bg-dark-pure);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+
+.titleWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bgTitle {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 72px;
+  letter-spacing: -3.6px;
+  color: rgba(226, 226, 226, 0.1);
+  margin-bottom: -32px;
+  margin-left: -4px;
+  text-transform: uppercase;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.mainTitle {
+  position: relative;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  color: rgba(226, 226, 226, 1);
+  margin: 0;
+  text-transform: none;
+  z-index: 2;
+}
+
+:global([dir="rtl"]) .mainTitle {
+  left: auto;
+  right: 0;
+  font-family: 'Tajawal', sans-serif;
+}
+
+:global([dir="rtl"]) .bgTitle {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.moreBtn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 32px;
+  border-radius: 100px;
+  color: rgba(228, 225, 237, 1);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.moreBtn:hover {
+  background: white;
+  color: black;
+  border-color: white;
+}
+
+:global([dir="rtl"]) .articleTitle {
+  font-family: 'Tajawal', sans-serif;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cardLink {
+  text-decoration: none;
+  display: block;
+  outline: none;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  border-color: rgba(173, 38, 227, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cardHeader {
+  padding: 30px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.6px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.8px;
+  color: rgba(255, 254, 254, 1);
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.dot {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.date {
+  font-family: 'DM Sans', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0;
+  color: rgba(157, 155, 155, 1);
+}
+
+.articleTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 23.8px;
+  font-weight: 500;
+  line-height: 33.6px;
+  letter-spacing: 0;
+  color: rgba(255, 254, 254, 1);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+:global([dir="rtl"]) .articleTitle {
+  font-family: 'Tajawal', sans-serif;
+  line-height: 1.6;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 65%;
+  /* Aspect ratio for images */
+  overflow: hidden;
+}
+
+.articleImg {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .articleImg {
+  transform: scale(1.05);
+}
+
+.cardFooter {
+  padding: 20px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.arrowIcon {
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .arrowIcon {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+:global([dir="rtl"]) .card:hover .arrowIcon {
+  transform: translateX(-5px);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bgTitle {
+    font-size: 48px;
+  }
+
+  .mainTitle {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
