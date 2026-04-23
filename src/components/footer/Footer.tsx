@@ -54,9 +54,9 @@ const Footer = () => {
             </motion.h2>
             <motion.p 
               className={styles.slogan}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 1.2 }}
               viewport={{ once: true }}
             >
               {dict.footerSlogan}
@@ -70,14 +70,20 @@ const Footer = () => {
           </div>
 
           {/* Links Columns */}
-          <div className={styles.linksGrid}>
+          <motion.div 
+            className={styles.linksGrid}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 1.2 }}
+            viewport={{ once: true }}
+          >
             <div className={styles.linksCol}>
               <h3>{dict.footerLinksTitle}</h3>
               <ul>
                 <li><Link href="#about">{dict.footerAbout}</Link></li>
                 <li><Link href="#team">{dict.footerTeam}</Link></li>
                 <li><Link href="#portfolio">{dict.footerPortfolio}</Link></li>
-                <li><Link href="#contact">{dict.footerContact}</Link></li>
+                <li><Link href="/contact">{dict.footerContact}</Link></li>
                 <li><Link href="#pricing">{dict.footerPricing}</Link></li>
               </ul>
             </div>
@@ -90,7 +96,7 @@ const Footer = () => {
                 <li><Link href="#solutions">{dict.footerSolStory}</Link></li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className={styles.bottomBar}>

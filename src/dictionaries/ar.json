@@ -54,5 +54,21 @@
   "footerSolProduct": "مرئيات المنتجات الذكية",
   "footerSolConcepts": "المفاهيم الإبداعية",
   "footerSolStory": "السرد القصصي الرقمي",
-  "footerCopyright": "© 2026 EVA. جميع الحقوق محفوظة."
+  "footerCopyright": "© 2026 EVA. جميع الحقوق محفوظة.",
+  "contactPageTitle": "اتصل بنا",
+  "contactPageSubtitle": "دعونا نتعاون لإعادة تعريف هويتك البصرية.",
+  "contactStudio": "استوديو الخاص بنا",
+  "contactAddress": "العنوان",
+  "contactPhone": "الهاتف",
+  "contactEmail": "البريد الإلكتروني",
+  "contactFormName": "اسمك",
+  "contactFormEmail": "البريد الإلكتروني",
+  "contactFormSubject": "الموضوع",
+  "contactFormPhone": "رقم الهاتف",
+  "contactFormCompany": "الشركة",
+  "contactNeedHelp": "هل تحتاج إلى مساعدة؟",
+  "contactHelpDesc": "نحن نحب أن نسمع منك ونتطلع للتحدث عن مشروعك. اتصل بنا إذا كان لديك أي أسئلة وسنقوم بالرد عليك في أقرب وقت ممكن.",
+  "contactFormMessage": "رسالتك",
+  "contactFormSend": "إرسال الرسالة",
+  "contactSuccess": "تم إرسال الرسالة بنجاح!"
 }

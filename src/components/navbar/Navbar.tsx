@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './navbar.module.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
@@ -12,6 +13,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,9 +30,10 @@ const Navbar = () => {
     { name: language === 'fr' ? 'Services' : language === 'en' ? 'Services' : 'الخدمات', href: '/services' },
     { name: language === 'fr' ? 'Réalisations' : language === 'en' ? 'Projects' : 'الأعمال', href: '/realisations' },
     { name: language === 'fr' ? 'Blog / Actualités' : language === 'en' ? 'Blog / News' : 'المدونة', href: '/blog' },
+    { name: language === 'fr' ? 'Contact' : language === 'en' ? 'Contact' : 'اتصل بنا', href: '/contact' },
   ];
 
-  const activeLink = links[0].name;
+  const activeLink = pathname;
 
   return (
     <nav className={`${styles.navbarWrapper} ${scrolled ? styles.scrolled : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
@@ -43,7 +46,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className={link.name === activeLink ? styles.active : ''}
+              className={pathname === link.href ? styles.active : ''}
             >
               {link.name}
             </Link>
@@ -83,31 +86,33 @@ const Navbar = () => {
             </div>
           </div>
 
-          <motion.button
-            className={styles.contactBtn}
-            whileHover="hover"
-            whileTap={{ scale: 0.97 }}
-          >
-            {dict.contactBtn}
-            <motion.div
-              className={styles.iconCircle}
-              variants={{
-                hover: {
-                  rotate: isRTL ? -45 : 45,
-                  scale: 1.1,
-                  transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
-                },
-              }}
+          <Link href="/contact">
+            <motion.button
+              className={styles.contactBtn}
+              whileHover="hover"
+              whileTap={{ scale: 0.97 }}
             >
-              <svg
-                width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"
-                style={{ transform: isRTL ? 'scaleX(-1)' : 'none' }}
+              {dict.contactBtn}
+              <motion.div
+                className={styles.iconCircle}
+                variants={{
+                  hover: {
+                    rotate: isRTL ? -45 : 45,
+                    scale: 1.1,
+                    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+                  },
+                }}
               >
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </motion.div>
-          </motion.button>
+                <svg
+                  width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"
+                  style={{ transform: isRTL ? 'scaleX(-1)' : 'none' }}
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </motion.div>
+            </motion.button>
+          </Link>
 
           {/* Toggle Menu Mobile */}
           <button
@@ -127,7 +132,7 @@ const Navbar = () => {
             key={link.name}
             href={link.href}
             onClick={() => setIsOpen(false)}
-            className={link.name === activeLink ? styles.active : ''}
+            className={pathname === link.href ? styles.active : ''}
           >
             {link.name}
           </Link>
@@ -137,9 +142,11 @@ const Navbar = () => {
           <button onClick={() => setLanguage('en')}>EN</button>
           <button onClick={() => setLanguage('ar')}>AR</button>
         </div>
-        <button className={styles.mobileContactBtn}>
-          {dict.contactBtn}
-        </button>
+        <Link href="/contact" onClick={() => setIsOpen(false)}>
+          <button className={styles.mobileContactBtn}>
+            {dict.contactBtn}
+          </button>
+        </Link>
       </div>
     </nav>
   );

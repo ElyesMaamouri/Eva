@@ -54,5 +54,21 @@
   "footerSolProduct": "AI Product Visuals",
   "footerSolConcepts": "Creative Concepts",
   "footerSolStory": "Digital Storytelling",
-  "footerCopyright": "© 2026 EVA. All rights reserved."
+  "footerCopyright": "© 2026 EVA. All rights reserved.",
+  "contactPageTitle": "Get in touch",
+  "contactPageSubtitle": "Let's collaborate to redefine your visual identity.",
+  "contactStudio": "Our Studio",
+  "contactAddress": "Address",
+  "contactPhone": "Phone",
+  "contactEmail": "Email",
+  "contactFormName": "Your Name",
+  "contactFormEmail": "Email Address",
+  "contactFormSubject": "Subject",
+  "contactFormPhone": "Phone Number",
+  "contactFormCompany": "Company",
+  "contactNeedHelp": "Need Help?",
+  "contactHelpDesc": "We love to hear from you and are looking forward to talking about your project. Contact us if you have any questions and we will get back to you as soon as possible.",
+  "contactFormMessage": "Your Message",
+  "contactFormSend": "Send Message",
+  "contactSuccess": "Message sent successfully!"
 }
