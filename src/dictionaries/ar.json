@@ -90,5 +90,20 @@
   "chartLabelQuality": "الدقة البصرية",
   "chartCategoryAI": "استوديو الذكاء الاصطناعي",
   "chartCategoryTrad": "تقليدي",
-  "navServices": "الخدمات"
+  "navServices": "الخدمات",
+  "agencyHeroTitle": "الوكالة",
+  "agencyHeroSubtitle": "حيث يلتقي الذكاء الاصطناعي بالغريزة الفنية.",
+  "agencyManifestoTitle": "بياننا",
+  "agencyManifestoPart1": "نحن لا نستبدل الفنان،",
+  "agencyManifestoPart2": "نحن نعطيه أجنحة.",
+  "agencyManifestoDesc": "ولدت EVA من قناعة عميقة: الذكاء الاصطناعي ليس غاية في حد ذاته، بل هو أقوى فرشاة تم إنشاؤها على الإطلاق. مهمتنا هي إطلاق العنان للإمكانات الإبداعية لكل صاحب رؤية من خلال إزالة الحواجز التقنية.",
+  "agencyTeamTitle": "أصحاب الرؤى",
+  "agencyTeamSub": "فريق هجين يجمع بين الخبرة البشرية والبراعة التكنولوجية.",
+  "agencyProcessTitle": "عمليتنا",
+  "agencyProcessStep1": "المفهوم والغريزة",
+  "agencyProcessStep1Desc": "كل شيء يبدأ بشرارة بشرية، عاطفة، حاجة استراتيجية.",
+  "agencyProcessStep2": "توليد الذكاء الاصطناعي",
+  "agencyProcessStep2Desc": "تعمل مساراتنا المملوكة على تحويل المفهوم إلى مجموعة من الرؤى عالية الدقة.",
+  "agencyProcessStep3": "الصقل البشري",
+  "agencyProcessStep3Desc": "يقوم فنانونا بصقل كل بكسل لضمان عاطفة وجودة لا تشوبها شائبة."
 }

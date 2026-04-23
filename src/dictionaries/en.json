@@ -90,5 +90,20 @@
   "chartLabelQuality": "Visual Fidelity",
   "chartCategoryAI": "AI Studio",
   "chartCategoryTrad": "Traditional",
-  "navServices": "Services"
+  "navServices": "Services",
+  "agencyHeroTitle": "The Agency",
+  "agencyHeroSubtitle": "Where artificial intelligence meets artistic instinct.",
+  "agencyManifestoTitle": "Our Manifesto",
+  "agencyManifestoPart1": "Human instinct,",
+  "agencyManifestoPart2": "sublimated by AI.",
+  "agencyManifestoDesc": "EVA was born from a deep conviction: AI is not an end in itself, but the most powerful brush ever created. Our mission is to unleash the creative potential of every visionary by removing technical barriers.",
+  "agencyTeamTitle": "The Visionaries",
+  "agencyTeamSub": "A hybrid team blending human expertise and technological mastery.",
+  "agencyProcessTitle": "Our Process",
+  "agencyProcessStep1": "Concept & Instinct",
+  "agencyProcessStep1Desc": "Everything starts with a human spark, an emotion, a strategic need.",
+  "agencyProcessStep2": "AI Generation",
+  "agencyProcessStep2Desc": "Our proprietary pipelines transform the concept into a multitude of high-fidelity visions.",
+  "agencyProcessStep3": "Human Refinement",
+  "agencyProcessStep3Desc": "Our artists polish every pixel to guarantee irreproachable emotion and quality."
 }

@@ -29,6 +29,13 @@ const InstagramIcon = ({ size = 20 }) => (
 
 const Footer = () => {
   const { dict, isRTL } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <footer className={styles.footer} dir={isRTL ? 'rtl' : 'ltr'}>

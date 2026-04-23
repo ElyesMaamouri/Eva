@@ -47,7 +47,7 @@ const About = () => {
   };
 
   return (
-    <section className={styles.about} dir={isRTL ? 'rtl' : 'ltr'}>
+    <section id="about" className={styles.about} dir={isRTL ? 'rtl' : 'ltr'}>
       <motion.div
         className={`${styles.container} container-website`}
         variants={containerVariants}

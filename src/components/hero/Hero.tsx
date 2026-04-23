@@ -103,7 +103,7 @@ const Hero = () => {
             role="presentation"
             width={1440}
             height={872}
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
             priority
           />
         </motion.div>

@@ -90,5 +90,20 @@
   "chartLabelQuality": "Fidélité Visuelle",
   "chartCategoryAI": "Studio IA",
   "chartCategoryTrad": "Traditionnel",
-  "navServices": "Services"
+  "navServices": "Services",
+  "agencyHeroTitle": "L'Agence",
+  "agencyHeroSubtitle": "Où l'intelligence artificielle rencontre l'instinct artistique.",
+  "agencyManifestoTitle": "Notre Manifeste",
+  "agencyManifestoPart1": "L'instinct humain,",
+  "agencyManifestoPart2": "sublimé par l'IA.",
+  "agencyManifestoDesc": "EVA est né d'une conviction profonde : l'IA n'est pas une fin en soi, mais le pinceau le plus puissant jamais créé. Notre mission est de libérer le potentiel créatif de chaque visionnaire en supprimant les barrières techniques.",
+  "agencyTeamTitle": "Les Visionnaires",
+  "agencyTeamSub": "Une équipe hybride mêlant expertise humaine et maîtrise technologique.",
+  "agencyProcessTitle": "Notre Processus",
+  "agencyProcessStep1": "Concept & Instinct",
+  "agencyProcessStep1Desc": "Tout commence par une étincelle humaine, une émotion, un besoin stratégique.",
+  "agencyProcessStep2": "Génération IA",
+  "agencyProcessStep2Desc": "Nos pipelines propriétaires transforment le concept en une multitude de visions haute fidélité.",
+  "agencyProcessStep3": "Raffinement Humain",
+  "agencyProcessStep3Desc": "Nos artistes polissent chaque pixel pour garantir une émotion et une qualité irréprochable."
 }

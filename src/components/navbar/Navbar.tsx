@@ -29,7 +29,6 @@ const Navbar = () => {
     { name: language === 'fr' ? "L'agence" : language === 'en' ? 'Agency' : 'الوكالة', href: '/agence' },
     { name: language === 'fr' ? 'Services' : language === 'en' ? 'Services' : 'الخدمات', href: '/services' },
     { name: language === 'fr' ? 'Réalisations' : language === 'en' ? 'Projects' : 'الأعمال', href: '/realisations' },
-    { name: language === 'fr' ? 'Blog / Actualités' : language === 'en' ? 'Blog / News' : 'المدونة', href: '/blog' },
     { name: language === 'fr' ? 'Contact' : language === 'en' ? 'Contact' : 'اتصل بنا', href: '/contact' },
   ];
 
