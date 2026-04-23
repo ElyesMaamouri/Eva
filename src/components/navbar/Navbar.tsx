@@ -13,9 +13,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       const isScrolled = window.scrollY > 50;
       setScrolled(isScrolled);
@@ -35,7 +37,7 @@ const Navbar = () => {
   const activeLink = pathname;
 
   return (
-    <nav className={`${styles.navbarWrapper} ${scrolled ? styles.scrolled : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
+    <nav suppressHydrationWarning className={`${styles.navbarWrapper} ${scrolled ? styles.scrolled : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <div className={`${styles.navbar} container-website`}>
         <div className={styles.logo}>EVA</div>
 
@@ -43,11 +45,12 @@ const Navbar = () => {
         <div className={styles.navLinks}>
           {links.map((link) => (
             <Link
-              key={link.name}
+              key={link.href}
               href={link.href}
+              suppressHydrationWarning
               className={pathname === link.href ? styles.active : ''}
             >
-              {link.name}
+              <span suppressHydrationWarning>{link.name}</span>
             </Link>
           ))}
         </div>
@@ -58,7 +61,7 @@ const Navbar = () => {
               className={styles.langCurrent}
               onClick={() => setLangOpen(!langOpen)}
             >
-              <span className={styles.langName}>{language.toUpperCase()}</span>
+              <span suppressHydrationWarning className={styles.langName}>{mounted ? language.toUpperCase() : 'FR'}</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" style={{ opacity: 0.5, marginLeft: isRTL ? '0' : '4px', marginRight: isRTL ? '4px' : '0' }}>
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
@@ -128,12 +131,13 @@ const Navbar = () => {
       <div className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ''}`}>
         {links.map((link) => (
           <Link
-            key={link.name}
+            key={link.href}
             href={link.href}
             onClick={() => setIsOpen(false)}
+            suppressHydrationWarning
             className={pathname === link.href ? styles.active : ''}
           >
-            {link.name}
+            <span suppressHydrationWarning>{link.name}</span>
           </Link>
         ))}
         <div className={styles.mobileLangSwitcher}>

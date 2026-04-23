@@ -20,7 +20,19 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const dictionaries = { fr, en, ar };
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('fr');
+  const [language, setLanguageState] = useState<Language>('fr');
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('eva-language') as Language;
+    if (savedLang && (savedLang === 'fr' || savedLang === 'en' || savedLang === 'ar')) {
+      setLanguageState(savedLang);
+    }
+  }, []);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem('eva-language', lang);
+  };
 
   const dict = dictionaries[language];
   const isRTL = language === 'ar';

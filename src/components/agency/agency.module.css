@@ -73,18 +73,17 @@
 /* Moon — sits in the lower half of the hero, below the text */
 .moonWrapper {
   position: absolute;
-  bottom: -15%;
-  /* Moved up from -25% to be visible */
+  top: -80px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1440px;
-  z-index: 1;
+  height: auto;
+  z-index: 0;
+  opacity: 0.45;
   pointer-events: none;
-  opacity: 0.5;
-  /* Softer mask to ensure visibility */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
 
 
@@ -98,15 +97,18 @@
 
 .manifestoLabel {
   display: inline-block;
-  font-size: 0.82rem;
+  font-size: 12px;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  color: var(--accent-purple);
-  margin-bottom: 48px;
-  border: 1px solid rgba(173, 38, 227, 0.3);
-  padding: 8px 20px;
+  letter-spacing: 1.2px;
+  line-height: 16px;
+  padding: 8px 16px;
   border-radius: 100px;
-  background: rgba(173, 38, 227, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 48px;
+  color: #fff;
+  z-index: 5;
 }
 
 .manifestoText {
