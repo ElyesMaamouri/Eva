@@ -10,9 +10,9 @@ const AgencyTeam = () => {
   const { dict, isRTL } = useLanguage();
 
   const team = [
-    { name: "Elyes Maamouri", role: "Creative Director", image: "/user-1.jpg" },
-    { name: "Syrine Dridi",   role: "Creative Intelligence", image: "/user-2.jpg" },
-    { name: "Sarah Chen",     role: "Visual Strategist",    image: "/user-3.jpg" },
+    { name: "James Sterling", role: "Creative Director", image: "/user-1.jpg" },
+    { name: "Sophia Vance",   role: "Creative Intelligence", image: "/user-2.jpg" },
+    { name: "David Thorne",   role: "Visual Strategist",    image: "/user-3.jpg" },
   ];
 
   return (
