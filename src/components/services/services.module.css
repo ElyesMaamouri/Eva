@@ -107,7 +107,7 @@
 
 .moon {
   position: absolute;
-  top: -80px;
+  top: 6%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;

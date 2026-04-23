@@ -73,7 +73,7 @@
 /* Moon — sits in the lower half of the hero, below the text */
 .moonWrapper {
   position: absolute;
-  top: -80px;
+  top: 6%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -136,7 +136,7 @@
 .process {
   padding: 35px 0;
   position: relative;
-  border-top: 1px solid var(--border-color);
+  /* border-top: 1px solid var(--border-color); */
 }
 
 .processGrid {
