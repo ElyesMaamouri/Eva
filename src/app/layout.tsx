@@ -2,6 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { Epilogue, Tajawal } from "next/font/google";
+
+const epilogue = Epilogue({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-epilogue",
+  display: "swap",
+});
+
+const tajawal = Tajawal({
+  subsets: ["arabic"],
+  weight: ["400", "500", "700"],
+  variable: "--font-tajawal",
+  display: "swap",
+});
 
 const siteUrl = "https://eva-studio.com";
 
@@ -88,7 +103,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body suppressHydrationWarning>
+      <body
+        suppressHydrationWarning
+        className={`${epilogue.variable} ${tajawal.variable}`}
+      >
         <LanguageProvider>
           <Navbar />
           {children}

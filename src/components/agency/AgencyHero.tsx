@@ -44,7 +44,7 @@ const AgencyHero = () => {
           transition={{ duration: 1.5, delay: 0.2 }}
         >
           <Image
-            src="/moon.png"
+            src="/moon.jpg"
             alt=""
             role="presentation"
             width={1440}

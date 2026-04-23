@@ -30,7 +30,7 @@ const AgencyManifesto = () => {
           transition={{ duration: 1.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         >
           <Image
-            src="/moon.png"
+            src="/moon.jpg"
             alt=""
             width={1440}
             height={872}
