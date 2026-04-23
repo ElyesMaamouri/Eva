@@ -32,7 +32,7 @@ const Showcase = () => {
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" as any }}
           viewport={{ once: true }}
           className={styles.playBtnWrapper}
           onClick={() => setIsVideoOpen(true)}
@@ -45,7 +45,7 @@ const Showcase = () => {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" as any }}
           viewport={{ once: true }}
           className={styles.textContent}
         >

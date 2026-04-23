@@ -41,7 +41,7 @@ const About = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as any,
       },
     },
   };
@@ -101,7 +101,7 @@ const About = () => {
                     hover: {
                       rotate: isRTL ? -45 : 45,
                       scale: 1.1,
-                      transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] }
+                      transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] as any }
                     }
                   }}
                 >

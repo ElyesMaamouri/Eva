@@ -26,7 +26,7 @@ const Vision = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as any,
       },
     },
   };
@@ -47,7 +47,7 @@ const Vision = () => {
               className={styles.imageSmall}
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" as any }}
               viewport={{ once: true }}
             >
               <Image
@@ -63,7 +63,7 @@ const Vision = () => {
               className={styles.imageLarge}
               initial={{ x: 20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut" as any, delay: 0.2 }}
               viewport={{ once: true }}
             >
               <Image

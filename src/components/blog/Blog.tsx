@@ -54,7 +54,7 @@ const Blog = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.6, ease: "easeOut" as any }
     }
   };
 
@@ -103,6 +103,7 @@ const Blog = () => {
                     src={article.image} 
                     alt={article.title} 
                     fill 
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className={styles.articleImg}
                   />
                 </div>

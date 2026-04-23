@@ -25,7 +25,7 @@ const Portfolio = () => {
       y: 0,
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -78,7 +78,7 @@ const Portfolio = () => {
               onClick={() => openModal('/img-3.png')}
               aria-label={`${dict.portfolioView} 1`}
             >
-              <Image src="/img-3.png" alt="EVA Studio — Projet IA 1" fill className={styles.img} />
+              <Image src="/img-3.png" alt="EVA Studio — Projet IA 1" fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>
@@ -93,7 +93,7 @@ const Portfolio = () => {
               onClick={() => openModal('/img-4.png')}
               aria-label={`${dict.portfolioView} 2`}
             >
-              <Image src="/img-4.png" alt="EVA Studio — Projet IA 2" fill className={styles.img} />
+              <Image src="/img-4.png" alt="EVA Studio — Projet IA 2" fill sizes="(max-width: 768px) 100vw, 25vw" className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>
@@ -104,7 +104,7 @@ const Portfolio = () => {
               onClick={() => openModal('/img-5.png')}
               aria-label={`${dict.portfolioView} 3`}
             >
-              <Image src="/img-5.png" alt="EVA Studio — Projet IA 3" fill className={styles.img} />
+              <Image src="/img-5.png" alt="EVA Studio — Projet IA 3" fill sizes="(max-width: 768px) 100vw, 25vw" className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>
@@ -118,7 +118,7 @@ const Portfolio = () => {
               onClick={() => openModal('/img-6.png')}
               aria-label={`${dict.portfolioView} 4`}
             >
-              <Image src="/img-6.png" alt="EVA Studio — Projet IA 4" fill className={styles.img} />
+              <Image src="/img-6.png" alt="EVA Studio — Projet IA 4" fill sizes="(max-width: 768px) 100vw, 25vw" className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>

@@ -30,7 +30,7 @@ const Partners = () => {
                 repeat: Infinity,
                 repeatType: "loop",
                 duration: 45,
-                ease: "linear",
+                ease: "linear" as any,
               },
             }}
           >

@@ -40,7 +40,7 @@ const Hero = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Custom ease-out
+        ease: [0.16, 1, 0.3, 1] as any, // Custom ease-out
       },
     },
   };
@@ -59,7 +59,9 @@ const Hero = () => {
           alt=""
           role="presentation"
           fill
+          sizes="100vw"
           style={{ objectFit: 'cover' }}
+          priority
         />
       </motion.div>
 
@@ -69,7 +71,9 @@ const Hero = () => {
           alt=""
           role="presentation"
           fill
+          sizes="100vw"
           style={{ objectFit: 'contain' }}
+          priority
         />
       </div>
 
@@ -100,6 +104,7 @@ const Hero = () => {
             width={1440}
             height={872}
             style={{ width: '100%', height: 'auto' }}
+            priority
           />
         </motion.div>
       </div>
@@ -160,7 +165,7 @@ const Hero = () => {
                 hover: {
                   x: isRTL ? -4 : 4,
                   y: -4,
-                  transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+                  transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] as any },
                 },
               }}
             >

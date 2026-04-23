@@ -51,7 +51,7 @@ const CTA = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as any }}
           viewport={{ once: true }}
           className={styles.inner}
         >
@@ -59,7 +59,7 @@ const CTA = () => {
             className={styles.title}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
             viewport={{ once: true }}
           >
             {dict.ctaTitlePart1} <span className={styles.gradientText}>{dict.ctaTitlePart2}</span> {dict.ctaTitlePart3}
@@ -68,7 +68,7 @@ const CTA = () => {
             className={styles.description}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] as any }}
             viewport={{ once: true }}
           >
             {dict.ctaDesc}
@@ -90,7 +90,7 @@ const CTA = () => {
                   hover: {
                     rotate: isRTL ? -45 : 45,
                     scale: 1.1,
-                    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+                    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] as any },
                   },
                 }}
               >

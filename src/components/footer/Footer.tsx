@@ -83,6 +83,7 @@ const Footer = () => {
                 <li><Link href="#about">{dict.footerAbout}</Link></li>
                 <li><Link href="#team">{dict.footerTeam}</Link></li>
                 <li><Link href="#portfolio">{dict.footerPortfolio}</Link></li>
+                <li><Link href="/services">{dict.navServices}</Link></li>
                 <li><Link href="/contact">{dict.footerContact}</Link></li>
                 <li><Link href="#pricing">{dict.footerPricing}</Link></li>
               </ul>
