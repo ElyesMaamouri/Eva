@@ -6,6 +6,8 @@ import Showcase from "@/components/showcase/Showcase";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Partners from "@/components/partners/Partners";
 import Blog from "@/components/blog/Blog";
+import CTA from "@/components/cta/CTA";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Partners />
       <Showcase />
       <Blog />
+      <CTA />
+      <Footer />
     </main>
   );
 }

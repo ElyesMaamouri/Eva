@@ -99,7 +99,7 @@ const Navbar = () => {
                 },
               }}
             >
-              <svg 
+              <svg
                 width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"
                 style={{ transform: isRTL ? 'scaleX(-1)' : 'none' }}
               >

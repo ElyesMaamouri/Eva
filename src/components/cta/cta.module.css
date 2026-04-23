@@ -1,0 +1,282 @@
+.cta {
+  width: 100%;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-dark-pure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.ambientGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.glowHighlight {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 800px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.7;
+  filter: blur(60px);
+  animation: float 15s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translate(-55%, -45%) scale(1.1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(-45%, -55%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+.bgWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  /* Applying black over the image for deep texture */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 72px;
+  color: #fff;
+  letter-spacing: -3.6px;
+  margin-bottom: 24px;
+}
+
+:global([dir="rtl"]) .title {
+  font-family: 'Tajawal', sans-serif;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.gradientText {
+  font-weight: 100;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.description {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32.5px;
+  color: rgba(205, 194, 218, 1);
+  max-width: 800px;
+  margin-bottom: 48px;
+  letter-spacing: 0;
+}
+
+:global([dir="rtl"]) .description {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.btnWrapper {
+  display: inline-block;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--primary-gradient);
+  padding: 6px 6px 6px 32px;
+  border-radius: 100px;
+  color: #fff;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 40px rgba(127, 0, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100px;
+  box-shadow: 0 0 20px rgba(127, 0, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(127, 0, 255, 0.5);
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
+  transform: skewX(-25deg);
+  z-index: 1;
+  animation: shineLoop 3s infinite ease-in-out;
+}
+
+@keyframes shineLoop {
+  0% {
+    left: -100%;
+  }
+
+  33% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+:global([dir="rtl"]) .shine {
+  animation: shineLoopRTL 3s infinite ease-in-out;
+}
+
+@keyframes shineLoopRTL {
+  0% {
+    right: -100%;
+    left: auto;
+  }
+
+  33% {
+    right: 150%;
+    left: auto;
+  }
+
+  100% {
+    right: 150%;
+    left: auto;
+  }
+}
+
+.btn:hover .iconCircle {
+  /* Handled by framer-motion in JSX */
+}
+
+:global([dir="rtl"]) .btn:hover .iconCircle {
+  /* Handled by framer-motion in JSX */
+}
+
+:global([dir="rtl"]) .btn {
+  padding: 12px 48px 12px 12px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 20px;
+  gap: 30px;
+  min-width: 320px;
+  justify-content: space-between;
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  flex-shrink: 0;
+}
+
+.btn:hover .iconCircle {
+  /* Motion handles animation, but we can ensure layout consistency */
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 80px 0;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding-left: 20px;
+  }
+}
