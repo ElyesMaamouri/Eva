@@ -73,38 +73,56 @@ const Portfolio = () => {
         >
           {/* Left Block: Single Large Image */}
           <motion.div className={styles.colBig} variants={itemVariants}>
-            <div className={styles.imageWrapperBig} onClick={() => openModal('/img-3.png')}>
-              <Image src="/img-3.png" alt="Portfolio 1" fill className={styles.img} />
+            <button
+              className={styles.imageWrapperBig}
+              onClick={() => openModal('/img-3.png')}
+              aria-label={`${dict.portfolioView} 1`}
+            >
+              <Image src="/img-3.png" alt="EVA Studio — Projet IA 1" fill className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>
-            </div>
+            </button>
           </motion.div>
 
           {/* Middle Column: 2 stacked images */}
           <div className={styles.colMiddle}>
-            <motion.div className={styles.imageWrapperSmall} variants={itemVariants} onClick={() => openModal('/img-4.png')}>
-              <Image src="/img-4.png" alt="Portfolio 2" fill className={styles.img} />
+            <motion.button
+              className={styles.imageWrapperSmall}
+              variants={itemVariants}
+              onClick={() => openModal('/img-4.png')}
+              aria-label={`${dict.portfolioView} 2`}
+            >
+              <Image src="/img-4.png" alt="EVA Studio — Projet IA 2" fill className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>
-            </motion.div>
-            <motion.div className={styles.imageWrapperSmall} variants={itemVariants} onClick={() => openModal('/img-5.png')}>
-              <Image src="/img-5.png" alt="Portfolio 3" fill className={styles.img} />
+            </motion.button>
+            <motion.button
+              className={styles.imageWrapperSmall}
+              variants={itemVariants}
+              onClick={() => openModal('/img-5.png')}
+              aria-label={`${dict.portfolioView} 3`}
+            >
+              <Image src="/img-5.png" alt="EVA Studio — Projet IA 3" fill className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>
-            </motion.div>
+            </motion.button>
           </div>
 
           {/* Right Column: 1 tall image */}
           <motion.div className={styles.colTall} variants={itemVariants}>
-            <div className={styles.imageWrapperTall} onClick={() => openModal('/img-6.png')}>
-              <Image src="/img-6.png" alt="Portfolio 4" fill className={styles.img} />
+            <button
+              className={styles.imageWrapperTall}
+              onClick={() => openModal('/img-6.png')}
+              aria-label={`${dict.portfolioView} 4`}
+            >
+              <Image src="/img-6.png" alt="EVA Studio — Projet IA 4" fill className={styles.img} />
               <div className={styles.overlay}>
                 <span className={styles.viewText}>{dict.portfolioView}</span>
               </div>
-            </div>
+            </button>
           </motion.div>
         </motion.div>
       </div>

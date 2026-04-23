@@ -62,10 +62,10 @@ const Footer = () => {
               {dict.footerSlogan}
             </motion.p>
             <div className={styles.socials}>
-              <motion.a href="#" className={styles.socialIcon} whileHover={{ y: -3, color: '#fff' }}><FacebookIcon size={20} /></motion.a>
-              <motion.a href="#" className={styles.socialIcon} whileHover={{ y: -3, color: '#fff' }}><YoutubeIcon size={20} /></motion.a>
-              <motion.a href="#" className={styles.socialIcon} whileHover={{ y: -3, color: '#fff' }}><LinkedinIcon size={20} /></motion.a>
-              <motion.a href="#" className={styles.socialIcon} whileHover={{ y: -3, color: '#fff' }}><InstagramIcon size={20} /></motion.a>
+              <a href="https://facebook.com/eva-studio" aria-label="Suivez EVA sur Facebook" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><FacebookIcon size={20} aria-hidden="true" /></a>
+              <a href="https://youtube.com/@eva-studio" aria-label="Suivez EVA sur YouTube" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><YoutubeIcon size={20} aria-hidden="true" /></a>
+              <a href="https://linkedin.com/company/eva-studio" aria-label="Suivez EVA sur LinkedIn" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><LinkedinIcon size={20} aria-hidden="true" /></a>
+              <a href="https://instagram.com/eva_studio" aria-label="Suivez EVA sur Instagram" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><InstagramIcon size={20} aria-hidden="true" /></a>
             </div>
           </div>
 

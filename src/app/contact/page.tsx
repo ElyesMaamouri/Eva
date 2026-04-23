@@ -10,6 +10,7 @@ export const metadata = {
 const ContactPage = () => {
   return (
     <main>
+      <h1 className="sr-only">Contactez EVA Studio — Reims, France</h1>
       <Contact />
       <Footer />
     </main>

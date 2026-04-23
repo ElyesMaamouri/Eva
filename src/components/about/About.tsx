@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import styles from './about.module.css';
+import Image from 'next/image';
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -70,7 +71,7 @@ const About = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                 >
-                  <img src="/arrows.png" alt="" />
+                  <Image src="/arrows.png" alt="" role="presentation" width={80} height={80} />
                 </motion.div>
                 <span className={styles.number}>
                   <motion.span>{rounded}</motion.span>+

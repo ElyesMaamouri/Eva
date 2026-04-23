@@ -56,9 +56,15 @@ html, body {
   font-family: 'Epilogue', sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   overflow-x: hidden;
   position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body::after {
@@ -68,7 +74,7 @@ body::after {
   left: -100%;
   width: 300%;
   height: 300%;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  background-image: url("/noise.svg");
   opacity: 0.04;
   pointer-events: none;
   z-index: 9999;
@@ -139,4 +145,24 @@ button {
 
 .animate-fade {
   animation: fadeIn 0.8s ease forwards;
+}
+
+/* Global focus styles for keyboard accessibility (WCAG 2.1) */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Screen-reader only utility: visually hidden but accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

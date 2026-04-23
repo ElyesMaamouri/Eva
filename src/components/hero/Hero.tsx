@@ -56,9 +56,9 @@ const Hero = () => {
       >
         <Image
           src="/ambient-glows.svg"
-          alt="Ambient Glows"
+          alt=""
+          role="presentation"
           fill
-          priority
           style={{ objectFit: 'cover' }}
         />
       </motion.div>
@@ -66,7 +66,8 @@ const Hero = () => {
       <div className={styles.glow}>
         <Image
           src="/ambient-glows.svg"
-          alt="Glow Highlight"
+          alt=""
+          role="presentation"
           fill
           style={{ objectFit: 'contain' }}
         />
@@ -94,11 +95,11 @@ const Hero = () => {
         >
           <Image
             src="/moon.png"
-            alt="Moon Glow"
+            alt=""
+            role="presentation"
             width={1440}
             height={872}
             style={{ width: '100%', height: 'auto' }}
-            priority
           />
         </motion.div>
       </div>
