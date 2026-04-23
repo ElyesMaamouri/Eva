@@ -39,7 +39,9 @@ const Navbar = () => {
   return (
     <nav suppressHydrationWarning className={`${styles.navbarWrapper} ${scrolled ? styles.scrolled : ''}`} dir={isRTL ? 'rtl' : 'ltr'}>
       <div className={`${styles.navbar} container-website`}>
-        <div className={styles.logo}>EVA</div>
+        <Link href="/" className={styles.logo} aria-label="EVA Studio - Retour à l'accueil">
+          EVA
+        </Link>
 
         {/* Desktop Links */}
         <div className={styles.navLinks}>
@@ -60,6 +62,9 @@ const Navbar = () => {
             <button
               className={styles.langCurrent}
               onClick={() => setLangOpen(!langOpen)}
+              aria-label={language === 'fr' ? 'Changer la langue' : language === 'en' ? 'Change language' : 'تغيير اللغة'}
+              aria-expanded={langOpen}
+              aria-haspopup="listbox"
             >
               <span suppressHydrationWarning className={styles.langName}>{mounted ? language.toUpperCase() : 'FR'}</span>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" style={{ opacity: 0.5, marginLeft: isRTL ? '0' : '4px', marginRight: isRTL ? '4px' : '0' }}>
@@ -120,7 +125,9 @@ const Navbar = () => {
           <button
             className={styles.menuToggle}
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle Menu"
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -128,7 +135,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ''}`}>
+      <div id="mobile-menu" className={`${styles.mobileMenu} ${isOpen ? styles.mobileMenuOpen : ''}`}>
         {links.map((link) => (
           <Link
             key={link.href}
@@ -141,9 +148,9 @@ const Navbar = () => {
           </Link>
         ))}
         <div className={styles.mobileLangSwitcher}>
-          <button onClick={() => setLanguage('fr')}>FR</button>
-          <button onClick={() => setLanguage('en')}>EN</button>
-          <button onClick={() => setLanguage('ar')}>AR</button>
+          <button onClick={() => setLanguage('fr')} aria-label="Passer en Français">FR</button>
+          <button onClick={() => setLanguage('en')} aria-label="Switch to English">EN</button>
+          <button onClick={() => setLanguage('ar')} aria-label="التغيير إلى العربية">AR</button>
         </div>
         <Link href="/contact" onClick={() => setIsOpen(false)}>
           <button className={styles.mobileContactBtn}>

@@ -285,8 +285,9 @@
   font-weight: 600;
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 8px;
+  min-width: 60px;
 }
 
 @media (max-width: 1024px) {

@@ -146,7 +146,7 @@ const Hero = () => {
               </svg>
             </div>
           </div>
-          <div className={styles.socialText}>
+          <div className={styles.socialText} aria-live="polite" aria-label={`${dict.clientText} total`}>
             <strong><motion.span>{rounded}</motion.span>k+</strong>
             <span className={styles.clientText}> {dict.clientText}</span>
           </div>

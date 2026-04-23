@@ -27,6 +27,7 @@ const PortfolioModal: React.FC<PortfolioModalProps> = ({ isOpen, image, onClose,
           <motion.button 
             className={styles.closeBtn}
             onClick={onClose}
+            aria-label="Fermer la vue agrandie"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
